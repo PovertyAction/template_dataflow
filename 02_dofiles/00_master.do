@@ -100,17 +100,17 @@ pause on
 
 **D. Add user-written programs
 	*install packages to the project folder for version control
-	net set ado "${ados}"
+	net set ado "${dir_ados}"
 	foreach package in PACKAGES {
 		qui {
 			loc letter = substr("`package'",1,1)
-			cap conf file "${ados}/`letter'/`package'.ado"
+			cap conf file "${dir_ados}/`letter'/`package'.ado"
 			if _rc == 601 ssc install `package'
 		}
 	}
 
 	*Set stata ado preferneces to use ados downloaded for project files
-	adopath++ "${ados}"
+	adopath++ "${dir_ados}"
 
 
 **E. Add user written programs for HFCs
