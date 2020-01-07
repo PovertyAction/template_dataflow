@@ -33,4 +33,4 @@ gl strvars 		""
 gl numvars 		""
 
 * import globals from hfc_inputs -- adjust filename if hfc_inputs file renamed
-ipacheckimport using "$dir_inp/hfc_inputs.xlsm"
+if $checks ipacheckimport using "$dir_inp/hfc_inputs.xlsm"
