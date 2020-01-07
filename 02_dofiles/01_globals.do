@@ -1,7 +1,7 @@
 ********************************************************************************
-** 	TITLE: 02_globalss.do
+** 	TITLE: 02_globals.do
 **
-**	PURPOSE: Specify gls for files, folders and variables
+**	PURPOSE: Specify globals for files, folders and variables
 **				
 **	AUTHOR: 
 **
@@ -32,4 +32,5 @@ gl strvars 		""
 * variables to destring
 gl numvars 		""
 
-
+* import globals from hfc_inputs -- adjust filename if hfc_inputs file renamed
+ipacheckimport using "$dir_inp/hfc_inputs.xlsm"
